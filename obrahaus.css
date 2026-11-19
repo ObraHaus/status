@@ -1,0 +1,217 @@
+/* ObraHaus Status theme
+   Colors, type, and radii taken from https://obrahaus.com (and console.obrahaus.com):
+   --paper #0E0F0E, --paper-2 #161711, --ink #F0EBE2, --dim #A49D8E,
+   --gold #C9913D, --amber #E7B25A, --gold-deep #8A6222,
+   --success #2F9E63, --destructive #A33D2A,
+   --radius-card 16px, display font Space Grotesk, mono JetBrains Mono.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --oh-paper: #0e0f0e;
+  --oh-paper-2: #161711;
+  --oh-ink: #f0ebe2;
+  --oh-dim: #a49d8e;
+  --oh-gold: #c9913d;
+  --oh-amber: #e7b25a;
+  --oh-gold-lo: #d3a45a;
+  --oh-gold-deep: #8a6222;
+  --oh-line: #f0ebe21a;
+  --oh-line-2: #f0ebe240;
+  --oh-success: #2f9e63;
+  --oh-down: #a33d2a;
+
+  --body-background-color: #0e0f0e;
+  --body-text-color: #f0ebe2;
+  --card-background-color: #161711;
+  --nav-background-color: rgba(14, 15, 14, 0.86);
+  --nav-border-bottom-color: #f0ebe21a;
+  --nav-current-border-bottom-color: #c9913d;
+  --card-border-color: #f0ebe238;
+  --down-border-left-color: #a33d2a;
+  --down-background-color: #2a1612;
+  --degraded-border-left-color: #e7b25a;
+  --up-border-left-color: #2f9e63;
+  --tag-color: #0e0f0e;
+  --tag-up-background-color: #2f9e63;
+  --tag-down-background-color: #a33d2a;
+  --tag-degraded-background-color: #c9913d;
+  --change-background-color: #c9913d;
+  --error-button-border-color: #8a6222;
+  --error-button-background-color: #c9913d;
+  --error-button-color: #0e0f0e;
+  --submit-button-border-color: #8a6222;
+  --submit-button-background-color: #c9913d;
+  --submit-button-color: #0e0f0e;
+  --graph-opacity: 0.72;
+  --graph-filter: none;
+}
+
+html,
+body {
+  background-color: var(--oh-paper);
+  color: var(--oh-ink);
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-image:
+    radial-gradient(58% 42% at 82% 0%, rgba(201, 145, 61, 0.16), transparent 68%),
+    radial-gradient(46% 36% at 10% 0%, rgba(231, 178, 90, 0.08), transparent 70%),
+    linear-gradient(180deg, #14140f 0%, #0e0f0e 42%);
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--oh-ink);
+}
+
+header {
+  margin-bottom: 2.25rem;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+header p.lead,
+header .lead {
+  color: var(--oh-dim);
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+header a,
+article a,
+.lead a {
+  color: var(--oh-gold-lo, #d3a45a);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+header a:hover,
+article a:hover,
+.lead a:hover {
+  color: var(--oh-amber);
+}
+
+nav {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  margin-bottom: 1.75rem;
+}
+
+nav a {
+  color: var(--oh-ink);
+}
+
+nav [aria-current] {
+  color: var(--oh-gold);
+  font-weight: 600;
+}
+
+.container {
+  max-width: 840px;
+}
+
+article {
+  border-radius: 16px;
+  background: var(--oh-paper-2);
+  border: 1px solid var(--oh-line-2);
+  box-shadow: 0 14px 40px -22px rgba(0, 0, 0, 0.5);
+}
+
+article + article {
+  margin-top: 0.65rem;
+}
+
+article h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+article.up,
+article.down,
+article.degraded {
+  border-left-width: 3px;
+}
+
+.tag {
+  border-radius: 999px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 65%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.55rem;
+}
+
+.data,
+dl dd {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.95em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--oh-dim);
+  font-weight: 500;
+}
+
+.f.r label {
+  color: var(--oh-dim);
+  cursor: pointer;
+}
+
+.r input:checked + label {
+  color: var(--oh-ink);
+  font-weight: 600;
+}
+
+/* Keep the duration switch usable on small screens */
+.f.r {
+  gap: 0.25rem 0.15rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  nav {
+    white-space: normal;
+  }
+
+  article {
+    padding: 0.95rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}
