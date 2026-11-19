@@ -1,31 +1,75 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# ObraHaus Status — https://status.obrahaus.com
+# Native site groups/sections are not supported by the Upptime status website
+# (sites render as a flat list). Sites are ordered by group and named with a prefix.
+owner: ObraHaus
+repo: status
+user-agent: ObraHaus
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  # Group: ObraHaus
+  - name: "ObraHaus — Website"
+    url: https://obrahaus.com
+    tags:
+      - ObraHaus
+  - name: "ObraHaus — FileForge"
+    url: https://fileforge.obrahaus.com
+    tags:
+      - ObraHaus
+  - name: "ObraHaus — Job Atlas"
+    url: https://jobatlas.obrahaus.com
+    tags:
+      - ObraHaus
+  - name: "ObraHaus — Rezume"
+    url: https://rezume.obrahaus.com
+    tags:
+      - ObraHaus
+  - name: "ObraHaus — Console"
+    url: https://console.obrahaus.com
+    # Root returns 307 to /login. All 20x/30x already count as up by default;
+    # listed explicitly so the redirect is treated as up.
+    expectedStatusCodes:
+      - 200
+      - 201
+      - 202
+      - 203
+      - 204
+      - 301
+      - 302
+      - 303
+      - 307
+      - 308
+    tags:
+      - ObraHaus
+
+  # Group: Clients
+  - name: "Clients — Golden Nectar"
+    url: https://goldennectar.coffee
+    tags:
+      - Clients
+  - name: "Clients — Aldrick B"
+    url: https://aldrickb.com
+    tags:
+      - Clients
+  - name: "Clients — Angelika Joy"
+    url: https://angelikajoy.com
+    tags:
+      - Clients
+  - name: "Clients — SparkPoint"
+    url: https://sparkpoint.io
+    tags:
+      - Clients
+  - name: "Clients — SparkPoint Beta"
+    url: https://beta.sparkpoint.io
+    tags:
+      - Clients
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.obrahaus.com
+  name: ObraHaus Status
+  introTitle: "**ObraHaus Status**"
+  introMessage: Live status for ObraHaus products and client websites. This page is hosted on GitHub Pages, so it stays available even if our own servers are down. Incident history lives in the [status repository](https://github.com/ObraHaus/status).
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
