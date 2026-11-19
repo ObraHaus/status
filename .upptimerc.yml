@@ -65,10 +65,10 @@ sites:
 status-website:
   cname: status.obrahaus.com
   name: ObraHaus Status
-  logoUrl: https://raw.githubusercontent.com/ObraHaus/status/master/assets/obrahaus-icon.svg
-  faviconSvg: https://raw.githubusercontent.com/ObraHaus/status/master/assets/obrahaus-icon.svg
-  favicon: https://raw.githubusercontent.com/ObraHaus/status/master/assets/obrahaus-icon.png
-  themeUrl: https://raw.githubusercontent.com/ObraHaus/status/master/assets/obrahaus.css
+  logoUrl: https://status.obrahaus.com/obrahaus-icon.svg
+  faviconSvg: https://status.obrahaus.com/obrahaus-icon.svg
+  favicon: https://status.obrahaus.com/obrahaus-icon.png
+  themeUrl: https://status.obrahaus.com/obrahaus.css
   introTitle: "**ObraHaus Status**"
   introMessage: Live status for ObraHaus products and client websites. This page is hosted on GitHub Pages, so it stays available even if our own servers are down. Incident history lives in the [status repository](https://github.com/ObraHaus/status).
   navbar:
